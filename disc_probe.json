@@ -1,0 +1,29 @@
+{
+  "cue_name": "Tenchu - Stealth Assassins (USA) (Rev 1).cue",
+  "bin_name": "Tenchu - Stealth Assassins (USA) (Rev 1).bin",
+  "track_count": 1,
+  "data_track_size": 692960352,
+  "data_track_md5": "dde023c243dbd25b42a9f89d7321e104",
+  "data_track_sha1": "a33ca500872e3471b8d096b21eff3d30a310284c",
+  "data_track_sha256": "6834c77860ec3d16bc7ed4ba2fd409573e1584adb92c63c0a1e55669963c768a",
+  "data_track_crc32": "50e32c0f",
+  "boot_exe": "SLUS_007.06",
+  "serial": "SLUS-00706",
+  "serial_exe": "SLUS_007.06",
+  "volume_id": "",
+  "display_name": "Tenchu Stealth Assassins",
+  "load_address": "0x80011000",
+  "entry_pc": "0x8001A578",
+  "text_size": "0x0003B800",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "da4704056b52ae7930e912dcbdb053ea8a2fa9c4d9e65803c44f5565f485ba20",
+  "boot_exe_sha256": "58512c711fff42e09b99e9b95daa80c4e967d0d7e934d2122b69ff0ea2e6dadb",
+  "seed_count": 548,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

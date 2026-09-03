@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Tenchu Stealth Assassins"
+id = "SLUS-00706"
+players = 1
+exe = "disc/SLUS_007.06"
+disc = "disc/Tenchu - Stealth Assassins (USA) (Rev 1).cue"
+load_address = "0x80011000"
+entry_pc = "0x8001A578"
+text_size = "0x0003B800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Tenchu - Stealth Assassins (USA) (Rev 1).bin"
+cue_name = "Tenchu - Stealth Assassins (USA) (Rev 1).cue"
+boot_exe = "SLUS_007.06"
+known_sizes = [692960352]
+known_md5 = [
+  "dde023c243dbd25b42a9f89d7321e104",
+]
+known_sha1 = [
+  "a33ca500872e3471b8d096b21eff3d30a310284c",
+]
+known_crc32 = [
+  "50e32c0f",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+strict = true
+
+[runtime]
+window_title = "Tenchu Stealth Assassins Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "da4704056b52ae7930e912dcbdb053ea8a2fa9c4d9e65803c44f5565f485ba20"
